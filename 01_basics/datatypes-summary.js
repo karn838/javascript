@@ -37,3 +37,9 @@ const myFunction = function(){
     array                                  function
 
 */
+
+
+// +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+//Stack(Primitive) when stack is used we get copy of variable
+//Heap (Non-Primitive)  we get reference of value
