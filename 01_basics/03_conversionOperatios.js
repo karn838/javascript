@@ -19,3 +19,11 @@ let someNumber = 33;
 let stringNumber = String(someNumber)
 console.log(stringNumber)
 console.log(typeof stringNumber)
+
+console.log("1"+2);
+console.log(1+"2");
+console.log("1"+2+2);
+console.log(1+2+"2");
+
+console.log(true);
+console.log(+true);
