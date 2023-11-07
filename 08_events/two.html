@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>code with avnish</h2>
+    <button id="stop">Stop</button>
+</body>
+<script>
+    // setTimeout(function(){
+    //     console.log('avnish')
+    // },2000)
+
+    //reference deke bhi kr skte hai
+
+    // const avni = function(){
+    //     console.log('karn')
+    // }
+    // setTimeout(avni,2000)
+
+    const change = function(){
+        document.querySelector('h2').
+        innerHTML="best js series"
+    }
+    //setTimeout(change,2000)
+
+    //change hone se roke kaise
+    const changehone = setTimeout(change,2000)
+    document.querySelector("#stop").
+    addEventListener('click',function(){
+        clearTimeout(changehone)
+        console.log('stopped')
+    })
+</script>
+</html>

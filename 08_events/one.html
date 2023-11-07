@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>html Events</title>
+</head>
+<body style="background-color: black; color:aliceblue;">
+    <h2>Amazing images</h2>
+    <div>
+        <ul id="images">
+            <li><img width="200px" id="photoshop" 
+                src="https://images.pexels.com/photos/18148936/pexels-photo-18148936.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load" 
+                alt="photoshop"></li>
+            </li>
+            <li><img width="200px" id="japan" 
+                src="https://images.pexels.com/photos/18148937/pexels-photo-18148937/free-photo-of-vintage-tram-on-a-street.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load" 
+                alt=""></li>
+            </li>
+            <li><img width="200px" id="river" 
+                src="https://images.pexels.com/photos/1739846/pexels-photo-1739846.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load" 
+                alt="photoshop"></li>
+            </li>
+            <li><img width="200px" id="owl" 
+                src="https://images.pexels.com/photos/3532552/pexels-photo-3532552.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load" 
+                alt=""></li>
+            </li>
+            <li><img width="200px" id="prayer" 
+                src="https://images.pexels.com/photos/3532559/pexels-photo-3532559.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load" 
+                alt=""></li>
+            </li>
+        </ul>
+    </div>
+</body>
+<script>
+    // document.getElementById('owl').onclick = function(){
+    //     alert("owl clicked")
+    // }
+
+    //attachEvent() phle ye bhi use hota tha internet  xplorer me
+    //jquery- on
+
+    //inke baare me padhna hai
+    //type, timestamp, defaultPrevented
+    //target, toElement, srcElement, currentTarget,
+    //clientX, clientY, screenX, screenY
+    //altkey, ctrlkey, shiftkey, keyCode
+    // document.getElementById('owl').addEventListener('click',function(){
+    //     console.log(e)
+    // },false)                 //false= event propogation  1.bubbling when false, 2.capturing when true
+    //false phle khud ka element print krega phir upper level ka bubble ki tarah
+    //false upar wala element print hota like parent then khud ka
+    
+    // document.getElementById('images').addEventListener('click',function(){console.log("clicked inside ul")},false)
+    // document.getElementById('owl').addEventListener('click',function(e){
+    //     console.log("own clicked");
+    //     e.stopPropagation()         //stoping propogation
+    // },false)
+
+    //to remove image when we click on that image
+    //but agar li pe click krenge to saara image remove ho jaega 
+    // document.querySelector('#images').addEventListener('click',function(e){
+    //      //target -> means value kha se aa rhi hai uska source
+    //      console.log(e.target.parentNode)
+    //      let removeit = e.target.parentNode
+    //      removeit.remove()
+    // },false)
+
+    //is se kya hoga pura li delete nhi hoga bs agar tagname img hoga whi delete hoga
+    document.querySelector('#images').addEventListener('click',function(e){
+         //target -> means value kha se aa rhi hai uska source
+         console.log(e.target.tagName);
+         if(e.target.tagName==='IMG'){
+            console.log(e.target.id);
+            let removeit = e.target.parentNode
+         removeit.remove()
+         }
+    },false)
+    //can also be done by this way
+   // removeit.parentNode.removeChild(removeit)
+</script>
+</html>

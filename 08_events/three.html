@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Events</title>
+</head>
+<body>
+    <h1>javascript with avnish</h1>
+    <button id="start">Start</button>
+    <button id="stop">Stop</button>
+</body>
+<script>
+    const sayDate = function(){
+        console.log("hello",Date.now());
+    }
+    //const intervalId = setInterval(sayDate,1000,"hi")
+   // clearInterval(intervalId)
+    //start pe printing start ho jae 
+    //stop pe stop ho jae
+     //document.querySelector("#start").
+    //  addEventListener('click',function(){
+    //      setInterval(sayDate)
+    //      console.log(started)
+    //  })
+
+    //stop button k liye code
+    //const stopping = setInterval(setInterval(sayDate,1000))
+    document.querySelector('#stop').
+    addEventListener('click',function(){
+        clearInterval(stopping)
+        console.log("stopped");
+    })
+</script>
+</html>
